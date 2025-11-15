@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 45vh;
+    height: 60vh;
     flex-direction: row;
     border: 5px solid black;
 }
@@ -29,3 +29,4 @@ button:hover{
 button:active{
     transform: scale(0.9);
 }
+
