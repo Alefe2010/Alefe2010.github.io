@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nome</title>
+    <link rel="stylesheet" href="nome.css">
+</head>
+<body>
+    <div class="cont">
+        <label for=""><b>Nome Completo:</b></label>
+        <input type="text" id="fullname">
+        <button type="button" onclick="getFirstName()">>></button>
+        <label for=""><b>Nome:</b></label>
+        <input type="text" id="firstname">
+        <label for=""><b>Sobrenome:</b></label>
+        <input type="text" id="lastname">
+    </div>
+    <script>
+        
+        function getFirstName(){
+            let nomeCompleto = document.getElementById("fullname").value;
+            let array = [];
+            array.push(nomeCompleto);
+            let partes = array[0].split(" ");
+            
+            if(nomeCompleto === ""){
+                document.getElementById("firstname").value = "VAZIO";
+                document.getElementById("lastname").value = "VAZIO";
+            }
+            else if(partes.length == 1){
+                document.getElementById("firstname").value = nomeCompleto;
+                document.getElementById("lastname").value = "VAZIO";
+            }
+            else {
+                let primeiro = partes[0];
+                document.getElementById("firstname").value = primeiro;
+                
+                let ultimo = partes[partes.length - 1];
+                document.getElementById("lastname").value = ultimo;
+            }
+        }
+        
+        
+    </script>
+</body>
+</html>
