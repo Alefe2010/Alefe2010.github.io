@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo do IMC</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+        .root{
+            margin: 2rem 25rem 2rem 25rem;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            border: solid black 2px;
+            justify-content: center;
+            height: 75vh;
+            padding: 1rem;
+
+        }
+        input {
+            width: 500px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+        button {
+            width: 250px;
+            background-color: purple;
+            color: aliceblue;
+            border: none;
+            padding: 1rem;
+            border-radius: 20px;
+
+        }
+        h4{
+            margin-top: 1rem;
+            padding: 1rem;
+            border: dotted black 2px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="root">
+        <label for=""><b>Nome:</b></label>
+        <input type="text" id="nome"placeholder="Dígite seu nome aqui...">
+        <label for=""><b>Peso:</b></label>
+        <input type="number" id="peso">
+        <label for=""><b>Altura:</b></label>
+        <input type="number" id="altura" placeholder="Em metros...">
+        <button id="calculo" onclick="calcularImc()"><b>Calcular IMC</b></button>
+        <h4 id="resposta"></h4>
+
+    </div>
+    
+    <script>
+        function calcularImc() {
+            let name = document.getElementById("nome").value;
+            let weigth = document.getElementById("peso").value;
+            let height = document.getElementById("altura").value;
+            let resp = document.getElementById("resposta");
+
+            let valorDoImc = (weigth / height ** 2);
+
+            document.getElementById("resposta").textContent = `Olá ${name}.O seu IMC é : ${valorDoImc.toFixed(2)}`;
+        }
+
+    </script>
+</body>
+</html>
