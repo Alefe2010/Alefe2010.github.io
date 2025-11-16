@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotron</title>
+    <style>
+        *{
+            font-size: 25px;
+            font-family: Arial;
+        }
+        header{
+            text-align: center;
+            padding: 1rem;
+        }
+        h1{
+             font-size: 50px;
+        }
+        img{
+            height: 600px;
+            width: 500px;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            height:75vh;
+        }
+        button{
+            background-color: black;
+            color: aliceblue;
+            border: none;
+            width: 150px;
+            height: 50px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selecione um Robotron</h1>
+    </header>
+    <div class="main">
+        <button onclick="trocarParaEsquerda()"><b><<</b></button>
+        <img src="img1.png" id="robotron">
+        <button onclick="trocarParaDireita()"><b>>></b></button>
+    </div>
+    
+    <script>
+        let imagens = ["img1.png", "img2.png", "img4.png", "img5.png", "img6.png", "img7.png"];
+        let index = 0;
+        let img = document.getElementById("robotron");
+
+        function trocarParaDireita() {
+            index++;
+            if(index >= imagens.length){
+                index = 0;
+            }
+            img.src = imagens[index];
+        }
+        function trocarParaEsquerda() {
+            index--;
+            if(index < 0){
+                index = imagens.length - 1;
+            }
+            img.src = imagens[index];
+        }
+        
+    </script>
+</body>
+</html>
