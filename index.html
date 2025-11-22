@@ -1,38 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        *{
-            font-family: Arial;
-        }          
-        h1{
-            text-align: center;
-            margin-top: 2rem;
-        }
-        #intro{
-            margin-bottom: 1rem; 
-        }
-        img{
-            width: 375px;
-            height: 500px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+    <title>Robotron 2000</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header>
-        <h1>Álefe Matheus Silva dos Santos</h1>
-        <h4 id="intro">Olá me chamo Álefe, tenho 15 anos e sou estudante do 1º ano do Ensino Médio.</h4>
-    </header>
-    <img src="20251105_142536 (2).jpg">
-    <h3>Email para contato: amss34@aluno.ifal.edu.br</h3>
-    <div>
-        <p><b>Formação acadêmica:</b> atualmente, conclui todo o Ensino Fundamental (Ensino Fundamental completo) e me encontro concluindo o 1º ano do Ensino Médio. </p>
-        <p><b>Experiência profissional:</b> até este momento tenho 2 PHDs, um em Engenharia de Software e outro em Engenharia de Inteligência Artificial, já trabalhei em 2 empresas, além de que já participei da criação de +10 projetos de pesquisas e tecnologias <br>na área de programação atuando como programador fullstack.</p>
-        <p><b>Habilidades:</b> trabalho bem em equipe (contanto que nós tenhamos uma boa comunicação, como a maioria dos profissionais), por ser engenheiro e ter 2 PHDs, também sendo programador fullstack, consigo trabalhar bem sozinho <br>(Mas gosto de trabalhar em equipe),
-             possuo alguma experiência mas, sei que ainda tenho uma longa jornada de muito aprendizado, me considero uma pessoa amigável, sou esforçado e adoro aprender novas coisas.  </p>
-    </div>
-    <h2>Atividades:</h2>
-    <a href="nome.html" >Atividade 01</a>
-    <a href="imc.html">Atividade 02</a>
-    <a href="robot.html">Atividade 03</a>
-</body>
-    
+    <main>
+        <section class="robotron">
+            <img id="robo" src="img/img1.png" alt="Robotron">
 
+            <div class="change">
+                <button id="left" onclick="trocarParaEsquerda()"><b><<</b></button>
+                <button id="rigth" onclick="trocarParaDireita()"><b>>></b></button>
+            </div>
+
+            <figcaption class="titulo">ROBOTRON <br>2000</figcaption>
+        </section>
+
+        <section class="box estatisticas">
+            <div class="estatistica">
+                <p class="estatistica-titulo">Força</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero">768</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Poder</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero">630</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Energia</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero">289</p>
+                </div>
+            </div>
+            <div class="estatistica">
+                <p class="estatistica-titulo">Velocidade</p>
+                <div class="estatistica-valor">
+                    <p class="estatistica-numero">597</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="equipamentos">
+            <form action="" class="montador">
+                <div class="box montador-conteudo">
+                    <div class="peca">
+                        <label for="" class="peca-titulo">Braços</label>
+                        <div class="controle">
+                            <button type="button" class="controle-ajuste" value="-">-</button>
+                            <input type="text" class="controle-contador" value="00">
+                            <button type="button" class="controle-ajuste" value="+">+</button>
+                        </div>
+                    </div>
+                    <hr class="linha">
+                    <div class="peca">
+                        <label for="" class="peca-titulo">Blindagem</label>
+                        <div class="controle">
+                            <button type="button" class="controle-ajuste"value="-">-</button>
+                            <input type="text" class="controle-contador" value="00">
+                            <button type="button" class="controle-ajuste" value="+">+</button>
+                        </div>
+                    </div>
+                    <hr class="linha">
+                    <div class="peca">
+                        <label for="" class="peca-titulo">Núcleos</label>
+                        <div class="controle">
+                            <button type="button"class="controle-ajuste" value="-">-</button>
+                            <input type="text" class="controle-contador" value="00">
+                            <button type="button" class="controle-ajuste" value="+">+</button>
+                        </div>
+                    </div>
+                    <hr class="linha">
+                    <div class="peca">
+                        <label for="" class="peca-titulo">Pernas</label>
+                        <div class="controle">
+                            <button type="button" class="controle-ajuste" value="-">-</button>
+                            <input type="text" class="controle-contador" value="00">
+                            <button type="button" class="controle-ajuste" value="+">+</button>
+                        </div>
+                    </div>
+                    <hr class="linha">
+                    <div class="peca">
+                        <label for="" class="peca-titulo">Foguetes</label>
+                        <div class="controle">
+                            <button type="button" class="controle-ajuste" value="-">-</button>
+                            <input type="text" class="controle-contador" value="00">
+                            <button type="button" class="controle-ajuste" value="+">+</button>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Iniciar produção" class="producao" id="producao">
+            </form>
+        </section>
+    </main>
+    <script>
+        // Para mudar as imagens dos robotrons
+        let imagens = ["img/img1.png", "img/img2.png", "img/img4.png", "img/img5.png", "img/img6.png", "img/img7.png"];
+        let index = 0;
+        let img = document.getElementById("robo");
+
+        function trocarParaDireita() {
+            index++;
+            if(index >= imagens.length){
+                index = 0;
+            }
+            img.src = imagens[index];
+        }
+        function trocarParaEsquerda() {
+            index--;
+            if(index < 0){
+                index = imagens.length - 1;
+            }
+            img.src = imagens[index];
+        }
+        
+        // Para alterar as caracterísiticas do robotron
+        let ajustes = document.getElementsByClassName("controle-ajuste");
+        let valor = document.getElementsByClassName("controle-contador");
+
+        for (let i = 0; i < ajustes.length; i++) {
+            ajustes[i].addEventListener("click", function() {
+                ajustar(i);
+            });
+        }
+        function ajustar(indice) {
+            let tipoDeAjuste = ajustes[indice].value;
+            let indiceContador = Math.floor(indice / 2);
+            let contador = parseInt(valor[indiceContador].value);
+            
+            if(tipoDeAjuste === "+" && contador < 10) {
+                contador++;
+            }
+            else if(tipoDeAjuste === "-") {
+                if(contador > 0 && contador <= 10) contador--;
+            }
+           
+            valor[indiceContador].value = (contador < 10 ? "0" : "") + contador;  
+        }
+    </script>
+</body>
+</html>
