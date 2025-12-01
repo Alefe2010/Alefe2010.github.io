@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            border: 2px solid black;
+            margin: 1rem;
+            font-size: 20px;
+        }
+        header{
+            font-size: 30px;
+            text-align: center;
+            
+        }
+        hr{
+            width: 90%;
+            height: 2px;
+            background-color: gray;
+        }
+        input{
+            margin-bottom: 1rem;
+            width: 250px;
+        }
+        #dados, #info{
+            margin: 2rem 20rem 2rem 20rem;
+        }
+        #ddd {
+            width:40px
+        }
+        #turn {
+            display: flex;
+            align-items: center;
+            width: 75%;
+            margin-right: 10px;
+            gap: 5px;
+        }
+        input[type="radio"], input[type="checkbox"]{
+            margin: 0;
+        }
+        #turn label {
+            margin-left: 1rem;
+            display: flex;
+            align-items: center;
+            width: 65px;
+            gap: 5px;
+        }
+        #atividades label {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            height: 5vh;
+            width: 0;
+            gap: 5px;
+            margin-bottom: 5px;
+        }
+        .but{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+        button{
+            margin-right: 1rem;
+        }
+       
+    </style>
+</head>
+<body>
+    <form action="">
+        <header>
+            <h1>Escola Virtual</h1>
+            <h2>Formulário de Pré-Matrículas</h2>
+            <hr>
+        </header>
+        <div id="dados">
+            <fieldset>
+                <h2>Dados Pessoais: </h2>
+                <div>
+                    <label for=""><b>Nome: </b></label>
+                    <input type="text" id="name">
+                </div>
+                <div>
+                    <label for=""><b>Data de Nascimento: </b></label>
+                    <input type="date" name="" id="">
+                </div>
+                <div>
+                    <label for=""><b>Nome da Mãe: </b></label>
+                    <input type="text" id="mom">
+                </div>
+                <div>
+                    <label for=""><b>Nome do Pai: </b></label>
+                    <input type="text" id="dad">
+                </div>
+                <div id="tell">
+                    <b>Telefone: </b>
+                    <label for=""> DDD: </label>
+                    (<input type="number" name="" id="ddd" >)
+                    <label for="">Tel: </label>
+                    <input type="number" name="" id="tel">
+                </div>
+                <div>
+                    <label for=""><b>Email: </b></label>
+                    <input type="email" name="" id="email"  placeholder="Dígite um email válido...">
+                </div>
+            </fieldset>
+        </div>
+        <div id="info">
+            <fieldset>
+                <h2>Informações Pessoais: </h2>
+                <div id="serie">     
+                    <label for="">Série: </label>
+                    <select name="" id="serie">
+                       <option value="">-- Escolha uma série --</option>
+                     <option value="preescolar">Pré-escolar</option>
+                        <option value="maternal">Maternal</option>
+                        <option value="fundamental">Fundamental</option>
+                        <option value="ensino_medio">Ensino Médio</option>
+                    </select>
+                </div>
+                <div id="turn">
+                    <p>Turno: </p>   
+                    <label for="manha"><input type="radio" name="turno" value="manha" id="manha">
+                        Manhã
+                    </label><br>
+                    
+                    <label for="tarde"><input type="radio" name="turno" value="tarde" id="tarde">
+                        Tarde
+                    </label>	
+                </div>
+                <div id="atividades">
+                    <h4>ATIVIDADES EXTRACURRICULARES: </h4>
+                    <label><input type="checkbox" class="check" > Informática</label>
+                    <label><input type="checkbox" class="check" > Música</label>
+                    <label><input type="checkbox" class="check" > Balet</label>
+                    <label><input type="checkbox" class="check" > Pintura</label>
+                    <label><input type="checkbox" class="check" > Judô</label>
+                    <label><input type="checkbox" class="check" > Futebol</label>
+                </div> 
+                
+            </fieldset>
+        </div>
+        <div class="but">
+            <button onclick=" return validarTudo()">Enviar Formulário</button>
+            <button>Limpar</button>
+        </div>
+    </form>
+    <script>
+        const dddsValidos = [
+            11,12,13,14,15,16,17,18,19,     // SP
+            21,22,24,                      // RJ
+            27,28,                         // ES
+            31,32,33,34,35,37,38,          // MG
+            41,42,43,44,45,46,             // PR
+            47,48,49,                      // SC
+            51,53,54,55,                   // RS
+            61,                            // DF
+            62,64,                         // GO
+            63,                            // TO
+            65,66,                         // MT
+            67,                            // MS
+            68,                            // AC
+            69,                            // RO
+            71,73,74,75,77,                // BA
+            79,                            // SE
+            81,87,                         // PE
+            82,                            // AL
+            83,                            // PB
+            84,                            // RN
+            85,88,                         // CE
+            86,89,                         // PI
+            91,93,94,                      // PA
+            92,97,                         // AM
+            95,                            // RR
+            96,                            // AP
+            98,99                          // MA
+            ];
+
+            function validarTudo() {
+                let nome = document.querySelector("#name").value.trim();
+                let nascimento = document.querySelector("input[type='date']").value.trim();
+                let mae = document.querySelector("#mom").value.trim();
+                let pai = document.querySelector("#dad").value.trim();
+                let telefone = document.querySelector("#tel").value.trim();
+                let serie = document.querySelector("#serie select").value;
+                let turno = document.querySelector("input[name='turno']:checked");
+                let email = document.getElementById("email").value.trim();
+                let testeEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                let ddd = document.getElementById("ddd").value;
+                let dddNumero = parseInt(ddd);
+
+                if (nome === "") {
+                    alert("O campo Nome é obrigatório.");
+                    return false;
+                }
+                
+                else if (nascimento === "") {
+                    alert("A data de nascimento é obrigatória.");
+                    return false;
+                }
+                else if (mae === "") {
+                    alert("O campo Nome da Mãe é obrigatório.");
+                    return false;
+                }
+                
+                else if (pai === "") {
+                    alert("O campo Nome do Pai é obrigatório.");
+                    return false;
+                }
+                
+                else if (ddd === "") {
+                    alert("O campo DDD é obrigatório.");
+                    document.getElementById("ddd").focus();
+                    return false;
+                }
+                else if (serie === "") {
+                    alert("Escolha uma série.");
+                    return false;
+                }
+                
+                else if (!turno) {
+                    alert("Escolha um turno.");
+                    return false;
+                }
+                
+                // Valida ddd
+                if (!dddsValidos.includes(dddNumero)) {
+                    alert("DDD inválido!");
+                    document.getElementById("ddd").focus();
+                    return false;
+                }
+
+                // converte a data para objeto Date
+                let anoNascimento = new Date(nascimento).getFullYear();
+
+                if (anoNascimento <= 1910 && anoNascimento > 2025) {
+                    alert("Ano de nascimento inválido! Digite um ano acima de 1910.");
+                    return false;
+                }
+                
+                // Valida email
+                if (!testeEmail.test(email)) {
+                    alert("Email inválido!");
+                    document.getElementById("email").focus();
+                    return false;
+                }
+
+                // Valida checkboxes
+                let checks = document.querySelectorAll(".check");
+                let marcados = 0;
+
+                for (let i = 0; i < checks.length; i++) {
+                    if (checks[i].checked) marcados++;
+                }
+
+                if (marcados > 3) {
+                    alert("Você só pode escolher NO MÁXIMO 3 atividades extracurriculares!");
+                    return false;
+                }
+
+                // Se tudo certo...
+                alert("Formulário enviado com sucesso!");
+                return true;
+            }
+
+    </script>
+</body>
+</html>
