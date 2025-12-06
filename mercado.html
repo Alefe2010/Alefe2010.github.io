@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contas</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body{
+            display: flex;
+            background-color: #f8f8f8;
+            justify-content: center;
+
+        }
+        .container{
+            display: flex;
+        }
+        .page-box{ 
+            font-size: 20px;       
+            background-color: #fff;
+            justify-content: center;
+            height: 40vh;
+            box-shadow: 0 2px 4px black;
+            border-radius: 10px;
+            padding: 50px;
+            margin-right: 2rem;
+            flex: 1;
+           
+        }
+        .categoria{
+            display: flex;
+        }
+        h1{
+            font-size: 32px;
+        }     
+        select{
+            width: 150px;
+        }
+        th{
+            background-color: #b1adad;
+        }
+        div{
+            margin: 1rem;
+            gap: 8px;
+        }
+        th, td{
+            padding: 10px;
+            border: 1px solid #eee;
+            text-align: left;
+        }
+        #but button {
+            margin-top: 1rem;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            margin-right: 2em;
+        }
+        #but button:first-child {
+            background-color: #4CAF50;
+            color: white; 
+        }
+        #but button:last-child {
+            background-color: #007bff;
+            color: white;
+        }
+        button:hover{
+            transform: scale(1.2);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-box">
+           <header>
+                <h1>Contas Mensais</h1>
+           </header>
+           <hr>
+           <div class="main">
+                <div class="categoria">
+                    <label for="sel"><b>Categoria: </b></label>
+                    <select name="" id="sel">
+                        <option value="">-- Opções --</option>
+                        <option value="Mercado">Mercado</option>
+                        <option value="Transporte">Transporte</option>
+                        <option value="Manutencao do Lar">Manutenção do Lar</option>
+                    </select>
+                </div>
+                <div class="valor">
+                    <label for="val"><b>Valor: </b></label>
+                    <input type="number" name="" id="val">
+                </div>
+                <div class="data">
+                    <label for="date"><b>Data: </b></label>
+                    <input type="date" name="" id="date">
+                </div>
+                <div id="but">
+                    <button type="button" id="adiciona" onclick="adicionar()">Adicionar</button>
+                    <button type="button" id="calucular" onclick="calcular()">Calcular</button>
+
+                </div>
+
+                <div class="extrato">
+                    <h3>Extrato Bancário</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Categoria</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="extratobody">
+
+                        </tbody>
+                    </table>
+                </div>
+           </div>
+        </div>
+        <div class="page-box">
+            <header>
+                <h2 id="resumo">Resumo dos Gastos</h2>
+            </header>
+            <hr>
+            <div id="resumo-content">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let gastos = []
+        
+        function adicionar() {
+            const categoria = document.getElementById("sel").value;
+            const valor = parseFloat(document.getElementById("val").value);
+            const data = document.getElementById("date").value;
+
+            if (!categoria || isNaN(valor) || !data || valor <= 0) {
+                alert("Por favor, preencha a Categoria, o Valor e a Data corretamente.");
+                return; 
+            }
+
+            const novoGasto = { categoria, valor, data };
+            gastos.push(novoGasto);
+            
+            //Mostra o novo gasto na tabela criando uma linha
+            const extratoBody = document.getElementById("extratobody");
+            const novaLinha = extratoBody.insertRow(); 
+
+            const [ano, mes, dia] = data.split('-');
+            const dataFormatada = `${dia}/${mes}/${ano}`;
+
+            // Inserir as 3 células (colunas)
+            novaLinha.insertCell().textContent = categoria;
+            novaLinha.insertCell().textContent = dataFormatada;
+            // Formata o valor para ter 2 casas decimais e usa vírgula
+            novaLinha.insertCell().textContent = "R$ " + valor.toFixed(2).replace('.', ','); 
+
+            document.getElementById("val").value = '';
+            document.getElementById("date").value = '';
+            document.getElementById("resumo-content").innerHTML = '<p>Clique em "Calcular" para atualizar o resumo.</p>';
+
+            
+        }
+
+        function calcular() {
+            if(gastos.length === 0){
+                document.getElementById("resumo-content").innerHTML = "<p>Nenhum gasto registrado</p>";
+                return;
+            }
+
+            let totalGeral = 0;
+            let totaisPorMes = {};
+            const totaisPorCategoria = {};
+
+            gastos.forEach(gasto =>{
+                totalGeral += gasto.valor;
+
+                const mes = gasto.data.substring(5, 7);
+                totaisPorMes[mes] = (totaisPorMes[mes] || 0) + gasto.valor;
+                totaisPorCategoria[gasto.categoria] = (totaisPorCategoria[gasto.categoria] || 0) + gasto.valor;
+
+            })
+
+            const resumoDiv = document.getElementById("resumo-content");
+            let resumoHTML = "";
+
+            resumoHTML += `<div><strong>Total Geral:</strong> R$ ${totalGeral.toFixed(2).replace('.', ',')}</div>`;
+            
+            // totais por Mês
+            // ordena os meses e gera um div para cada um
+            Object.keys(totaisPorMes).sort().forEach(mes => {
+                resumoHTML += `<div>Total no Mês ${mes}: R$ ${totaisPorMes[mes].toFixed(2).replace('.', ',')}</div>`;
+            });
+            
+            // totais por Categoria
+            Object.keys(totaisPorCategoria).forEach(categoria => {
+                resumoHTML += `<div>Total com ${categoria}: R$ ${totaisPorCategoria[categoria].toFixed(2).replace('.', ',')}</div>`;
+            });
+
+            
+            resumoDiv.innerHTML = resumoHTML;
+        }
+        
+    </script>
+</body>
+</html>
