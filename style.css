@@ -13,7 +13,7 @@
       left: clamp(50%, 15vw, 15%);
       transform: translate(-50%, -50%);
       color: oklch(20.8% 0.042 265.755);
-      font-size: clamp(18px, 3vw, 24px);
+      font-size: clamp(15px, 3vw, 24px);
     }
     .kogane{
         background: linear-gradient(90deg, #ffde59, #ff914d);
@@ -110,4 +110,5 @@
     .col-md-4 {
       margin-bottom: 3rem;
     }
+
 
