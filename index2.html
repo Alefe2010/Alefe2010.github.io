@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!-- BOOTSTRAP CSS -->
+ <link
+   href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+   rel="stylesheet">
+ <link rel="stylesheet" href="style.css">
+
+ <title>Kogane Sushi Oficial</title>
+</head>
+<body>
+
+ <!-- ================== NAVBAR ================== -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" id="navBar">
+  
+   <div class="container">
+     <a class="navbar-brand" href="#"> Kogane Sushi <span class="kogane">黄金</span></a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     
+     
+     <div class="collapse navbar-collapse" id="menuNavbar">
+       <ul class="navbar-nav ms-auto">
+         <li class="nav-item"><a class="nav-link" href="#inicio">Início</a></li>
+         <li class="nav-item"><a class="nav-link" href="#cardapio">Cardápio</a></li>
+         <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Nós</a></li>
+         <li class="nav-item"><a class="nav-link" href="#reservas">Reservas</a></li>
+         <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+         <li class="nav-item"><a class="nav-link" href="#contato">Fale Conosco</a></li>
+         <li class="nav-item"><a class="nav-link" href="#pedidos">Pedidos Online</a></li>
+         <li class="nav-item"><a class="nav-link" href="#promocoes">Promoções</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="boose">
+    <img src="jap.jpg" alt="" class="mage">
+    <div class="text">
+      <h1> Kogane Sushi <span class="kogane">黄金</span></h1>
+      <h4>O Sabor e a Elegância da Culinária Japonesa...</h4>
+    </div>
+  </div>
+  
+  
+  <!-- ================== 1. PÁGINA INICIAL ================== -->
+  <section id="inicio" class="bg-light py-5">
+    <div class="container">
+      <h1 class="mb-3">Início</h1>
+      <p>
+        Bem-vindo ao Kogane Sushi
+        Onde tradição e conforto se encontram para oferecer a você uma experiência única.
+        Aqui, cada detalhe foi pensado para que sua visita seja especial — dos sabores delicadamente preparados ao ambiente acolhedor.
+        
+        Sinta-se à vontade, relaxe e aproveite o melhor da culinária japonesa com a gente. <br>
+        Kogane Sushi — o sabor da harmonia.
+      </p>
+      <p>
+        O Kogane Sushi é um restaurante de culinária japonesa tradicional, que valoriza técnicas clássicas, ingredientes frescos e apresentações cuidadosas, oferecendo pratos que respeitam a essência da gastronomia japonesa.
+        
+        Seu público-alvo é amplo, atendendo todos que apreciam a culinária japonesa, desde quem está conhecendo esse universo pela primeira vez até clientes mais exigentes e apaixonados pela cozinha oriental.
+        
+        O clima do restaurante é acolhedor e versátil, combinando um ambiente elegante e confortável, ideal para momentos românticos, encontros familiares, jantares casuais e também ocasiões especiais, proporcionando sempre uma experiência agradável e memorável.
+      </p>
+      
+      <!-- TODO: Adicionar um carousel ou imagem de destaque aqui -->
+      <div class="mt-4">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                <img src="rst1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="rst2.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="rst3.png" class="d-block w100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+      </div>
+      
+      
+      <!-- TODO: Inserir horários de funcionamento (tabela ou lista) -->
+      <div class="mt-4">
+       <table class="table table-bordered text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Dia da Semana</th>
+            <th>Horário de Funcionamento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Segunda-feira</td>
+            <td>12:00 – 22:00</td>
+          </tr>
+          <tr>
+            <td>Terça-feira</td>
+            <td>18:00 – 23:00</td>
+          </tr>
+          <tr>
+            <td>Quarta-feira</td>
+            <td>18:00 – 23:00</td>
+          </tr>
+          <tr>
+            <td>Quinta-feira</td>
+            <td>18:00 – 23:00</td>
+          </tr>
+          <tr>
+            <td>Sexta-feira</td>
+            <td>18:00 – 00:00</td>
+          </tr>
+          <tr>
+            <td>Sábado</td>
+            <td>12:00 – 15:00 / 18:00 – 22:00</td>
+          </tr>
+          <tr>
+            <td>Domingo</td>
+            <td>18:00 – 22:00</td>
+          </tr>
+        </tbody>
+       </table>
+      </div>
+   </div>
+ </section>
+ <!-- ================== 2. CARDÁPIO ================== -->
+ <section id="cardapio" class="py-5">
+   <div class="container">
+     <h2 class="mb-3" id="card">Cardápio</h2>
+     <p>
+       O cardápio oferece uma experiência completa da culinária japonesa tradicional, começando por entradas leves e saborosas, como edamame, missoshiru e gyoza, que preparam o paladar de forma equilibrada.
+
+      Nos pratos principais, destacam-se os clássicos da cozinha japonesa, como sushis, sashimis, temakis e pratos quentes, preparados com ingredientes frescos e técnicas tradicionais, garantindo qualidade e autenticidade em cada preparo. <br>
+      <br>
+      Para acompanhar, o restaurante conta com bebidas típicas japonesas, como saquê, chás tradicionais e refrigerantes orientais, que harmonizam perfeitamente com os pratos e completam a experiência gastronômica.
+     </p>
+     <hr>
+
+
+     <!-- TODO: Criar estrutura para categorias (entradas, principais, sobremesas, bebidas) -->
+     <div class="entradas">
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item"><h3>Entradas</h3></li>
+         <li class="list-group-item">Edamame
+          <p class="descricao">Soja verde cozida no ponto certo e levemente salgada, perfeita para abrir o apetite de forma leve e saborosa.</p>
+          <span class="preco">R$ 15,00</span>
+        </li>
+          <p class="special">ESPECIAL DO DIA</p>
+         <li class="list-group-item" id="day">Harumaki
+          <p class="descricao">Rolinho crocante recheado com legumes frescos, servido quente e dourado, ideal para quem aprecia texturas equilibradas.</p>
+          <span class="preco">R$ 14,00</span>
+        </li>
+         <li class="list-group-item">Gyoza
+          <p class="descricao">Pastéis japoneses delicadamente grelhados, com recheio suculento e massa macia, acompanhados de molho especial.</p>
+          <span class="preco">R$ 20,00</span>
+        </li>
+         <li class="list-group-item">Sunomono
+          <p class="descricao">Salada refrescante de pepino em molho agridoce, com toque de gergelim, trazendo leveza e equilíbrio ao paladar.</p>
+          <span class="preco">R$ 16,00</span>
+        </li>
+       </ul>
+     </div>
+     <div class="pratos-main">
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item"><h3>Pratos Principais</h3></li>
+         <li class="list-group-item">Sushi tradicional (8 unidades)
+          <p class="descricao">Seleção de sushis preparados com arroz temperado e peixes frescos, respeitando as técnicas clássicas da culinária japonesa.</p> 
+          <span class="preco">R$ 32,00</span>
+         </li>
+         <li class="list-group-item">Sashimi (12 fatias)
+          <p class="descricao">Fatias generosas de peixes frescos, cortadas com precisão para realçar sabor e textura natural.</p>
+          <span class="preco">R$ 45,00</span>
+         </li>
+         <li class="list-group-item">Yakissoba (legumes e carne)
+          <p class="descricao">Macarrão oriental salteado com legumes frescos e proteínas selecionadas, envolvido em molho especial da casa.</p>
+          <span class="preco">R$ 36,00</span>
+         </li>
+          <p class="special">ESPECIAL DO DIA</p>
+         <li class="list-group-item" id="day">Yakissoba especial (frutos do mar)
+          <p class="descricao">Macarrão oriental salteado com camarões, lulas e legumes frescos, envolvido em um molho especial equilibrado, que realça o sabor delicado dos frutos do mar sem sobrepor sua leveza.</p> 
+          <span class="preco">R$ 45,00</span>
+         </li>
+         <li class="list-group-item">Udon ou Lámen
+          <p class="descricao">Sopa japonesa tradicional com caldo encorpado e aromático, macarrão artesanal, acompanhada de carnes selecionadas, ovos marinados e legumes, proporcionando uma experiência reconfortante e cheia de sabor.</p>
+          <span class="preco">R$ 49,00</span>
+         <li class="list-group-item">Temaki
+          <p class="descricao">Cone de alga recheado com arroz, peixe fresco e acompanhamentos, preparado na hora para garantir frescor e sabor intenso.</p>
+          <span class="preco">R$ 25,00</span>
+          
+         </li>
+       </ul>
+     </div>
+     <div class="bebidas">
+       <ul class="list-group list-group-flush">
+         <li class="list-group-item"><h3>Bebidas</h3></li>
+         <li class="list-group-item">Chá verde tradicional
+          <p class="descricao">Bebida clássica japonesa, leve e aromática, perfeita para harmonizar com os pratos.</p>
+           <span class="preco">R$ 8,00</span>
+         </li>
+         <li class="list-group-item">Chá de jasmim
+          <p class="descricao">Bebida aromática e delicada, preparada a partir de folhas de chá cuidadosamente infusionadas com flores de jasmim, oferecendo um sabor suave e levemente floral, ideal para acompanhar e equilibrar pratos da culinária japonesa.</p>
+           <span class="preco">R$ 9,00</span>
+         </li>
+           <p class="special">ESPECIAL DO DIA</p>
+         <li class="list-group-item" id="day">Saquê nacional (dose)
+          <p class="descricao">Bebida tradicional fermentada de arroz feita no Brasil, com sabor suave e marcante, ideal para acompanhar a refeição.</p>
+           <span class="preco">R$ 15,00</span>
+         </li>
+         <li class="list-group-item">Saquê importado (dose)
+          <p class="descricao">Bebida tradicional fermentada de arroz importada, com sabor intenso e marcante, ideal para acompanhar a refeição.</p>
+           <span class="preco">R$ 20,00</span>
+         </li>
+         <li class="list-group-item">Cerveja Japonesa
+          <p class="descricao">Cerveja leve e refrescante, de sabor equilibrado e final suave, perfeita para harmonizar com pratos da culinária japonesa, realçando os sabores sem sobrepor a experiência gastronômica.</p>
+           <span class="preco">R$ 22,00</span>
+         </li>
+       </ul>
+     </div>
+     <div class="sobremesas">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><h3>Sobremesas</h3></li>
+          <li class="list-group-item">Mochi
+            <p class="descricao">Doce tradicional japonês feito de massa de arroz glutinoso, macio por fora e recheado com sabores delicados, oferecendo uma experiência leve e autêntica.</p>
+            <span class="preco">R$ 15,00</span>
+         </li>
+         <li class="list-group-item">Tempurá de Sorvete
+          <p class="descricao">Sorvete envolto em uma massa crocante e levemente adocicada, servido quente por fora e frio por dentro, criando um contraste surpreendente de texturas.</p>
+          <span class="preco">R$ 18,00</span>
+         </li>
+         <li class="list-group-item">Cheesecake de Matcha
+          <p class="descricao">Cheesecake cremoso com toque de chá verde matcha, equilibrando doçura e sabor herbal em uma sobremesa sofisticada.</p>
+          <span class="preco">R$ 22,00</span>
+         </li>
+         <p class="special">ESPECIAL DO DIA</p>
+         <li class="list-group-item" id="day">Pudim Japonês
+          <p class="descricao">Pudim suave e aveludado, com calda delicada, inspirado na confeitaria japonesa, perfeito para finalizar a refeição com leveza.
+          </p>
+          <span class="preco">R$ 20,00</span>
+         </li>    
+        </ul>
+     </div>
+
+
+
+     <!-- TODO: Adicionar itens com descrições, preços e imagens -->
+  
+   </div>
+ </section>
+
+
+ <!-- ================== 3. SOBRE NÓS ================== -->
+ <section id="sobre" class="bg-light py-5">
+   <div class="container">
+     <h2 class="mb-3" >Sobre Nós</h2>
+
+     <h3 class="h5 mt-3">História do Restaurante</h3>
+     <p>
+       O Kogane Sushi nasceu do desejo de trazer a verdadeira essência da culinária japonesa para um ambiente onde o tempo desacelera e cada detalhe importa. Inspirado pela tradição, o restaurante foi idealizado como um espaço onde sabor, conforto e elegância caminham juntos.
+
+        Desde o início, o Kogane Sushi teve como propósito oferecer uma experiência autêntica, valorizando técnicas clássicas da gastronomia japonesa, a escolha cuidadosa de peixes frescos e a apresentação refinada de cada prato. Mais do que servir refeições, a ideia sempre foi criar momentos especiais, seja em um jantar romântico, em um encontro familiar ou em uma celebração importante.<br>
+      <br>
+        O nome Kogane, que remete ao dourado e à prosperidade, representa a busca constante pela excelência e pelo equilíbrio — valores profundamente enraizados na cultura japonesa e refletidos em cada aspecto do restaurante. Do ambiente acolhedor ao atendimento atencioso, tudo foi pensado para que cada cliente se sinta bem-vindo.
+
+        Assim, o Kogane Sushi se tornou não apenas um restaurante, mas um ponto de encontro para quem aprecia a tradição japonesa, o cuidado nos detalhes e o prazer de uma boa experiência à mesa
+     </p>
+     <hr>
+
+     <h3 class="h5 mt-3">Perfil do Chef</h3>
+     <p>
+      À frente da cozinha está o chef Hikaro Nakamura, profissional dedicado à culinária japonesa tradicional e contemporânea. Com formação voltada às técnicas clássicas da gastronomia oriental, Hikaro construiu sua experiência por meio de anos de estudo e prática, sempre priorizando o respeito aos ingredientes e a precisão nos preparos.
+
+      Sua especialidade está na confecção de sushis e sashimis, com domínio de cortes refinados, equilíbrio de sabores e apresentações cuidadosas. <br> <br> Ao longo de sua trajetória, o chef participou de eventos gastronômicos e treinamentos especializados, conquistando reconhecimento pela qualidade e consistência de seus pratos.
+
+      Ao lado de sua equipe de culinária, o chef Hikaro Nakamura mantém um alto padrão de excelência, garantindo que cada prato servido no Kogane Sushi ofereça uma experiência autêntica, harmoniosa e memorável para os clientes.
+     </p>
+      <hr>
+
+     <h3 class="h5 mt-3">Prêmios e Reconhecimentos</h3>
+     <div class="mt-4">
+       <ul class="list-group">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Destaque em Culinária Japonesa – Revista Sabores do Oriente
+           <span class="badge bg-warning text-dark">2024</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Melhor Restaurante Japonês da Cidade – Guia Gourmet Local
+           <span class="badge bg-success">2023</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Excelência em Atendimento e Experiência Gastronômica – Blog Mesa & Cultura
+           <span class="badge bg-primary">2022</span>
+         </li>
+       </ul>
+   </div>
+ </section>
+
+
+ <!-- ================== 4. RESERVAS ================== -->
+ <section id="reservas" class="py-5">
+   <div class="container">
+     <h2 class="mb-3">Reservas</h2>
+
+
+     <h3 class="h5 mt-3">Formulário de Reserva</h3>
+     <form class="needs-validation" novalidate>
+  <div class="row">
+    
+    <div class="col-md-6 mb-3">
+      <label for="data" class="form-label">Data</label>
+      <input type="date" class="form-control" id="data" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="horario" class="form-label">Horário</label>
+      <input type="time" class="form-control" id="horario" required>
+    </div>
+
+    <div class="col-md-4 mb-3">
+      <label for="pessoas" class="form-label">Número de Pessoas</label>
+      <input type="number" class="form-control" id="pessoas" min="1" max="20" placeholder="Ex: 4" required>
+    </div>
+
+    <div class="col-md-8 mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="telefone" class="form-label">Telefone</label>
+      <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <div class="col-md-6 mb-3">
+      <label for="email" class="form-label">E-mail</label>
+      <input type="email" class="form-control" id="email" placeholder="seuemail@email.com" required>
+    </div>
+
+  </div>
+
+  <button type="submit" class="btn btn-success mt-3">Reservar Mesa</button>
+</form>
+
+
+     <!-- TODO: Formulário Bootstrap de reserva -->
+
+
+     <h3 class="h5 mt-3">Política de Reservas</h3>
+     <div class="accordion" id="politicaReservas">
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#confirmacao">
+        📩 Confirmação da Reserva
+      </button>
+    </h2>
+    <div id="confirmacao" class="accordion-collapse collapse show" data-bs-parent="#politicaReservas">
+      <div class="accordion-body">
+        Todas as reservas são confirmadas automaticamente por <strong>e-mail ou WhatsApp</strong> após o envio do formulário.
+        Em alguns casos, nossa equipe poderá entrar em contato para confirmação adicional.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#atraso">
+        ⏰ Tolerância de Atraso
+      </button>
+    </h2>
+    <div id="atraso" class="accordion-collapse collapse" data-bs-parent="#politicaReservas">
+      <div class="accordion-body">
+        O Kogane Sushi concede uma tolerância de até <strong>15 minutos</strong> de atraso.
+        Após esse período, a mesa poderá ser liberada para outros clientes, especialmente em horários de grande movimento.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cancelamento">
+        ❌ Cancelamentos
+      </button>
+    </h2>
+    <div id="cancelamento" class="accordion-collapse collapse" data-bs-parent="#politicaReservas">
+      <div class="accordion-body">
+        Cancelamentos devem ser realizados com pelo menos <strong>2 horas de antecedência</strong>,
+        através do mesmo canal utilizado para a reserva (site, WhatsApp ou telefone).
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#alteracoes">
+        🔄 Alterações na Reserva
+      </button>
+    </h2>
+    <div id="alteracoes" class="accordion-collapse collapse" data-bs-parent="#politicaReservas">
+      <div class="accordion-body">
+        Alterações de data, horário ou número de pessoas estão sujeitas à disponibilidade
+        e devem ser solicitadas com antecedência.
+      </div>
+    </div>
+  </div>
+
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#naocomparecimento">
+        🚫 Não Comparecimento
+      </button>
+    </h2>
+    <div id="naocomparecimento" class="accordion-collapse collapse" data-bs-parent="#politicaReservas">
+      <div class="accordion-body">
+        Reservas sem comparecimento e sem aviso prévio poderão resultar
+        em restrições para futuras reservas.
+      </div>
+    </div>
+  </div>
+
+</div>
+   </div>
+ </section>
+
+
+ <!-- ================== 5. GALERIA ================== -->
+ <section id="galeria" class="bg-light py-5">
+  <div class="galeria-content">
+   <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="yakissoba.png" class="d-block w-100" alt="...">
+        <!--https://www.lecreuset.com.br/yakisoba-tradicional/SKI_259.html?srsltid=AfmBOopJHV0A3RWCkQfrd3D7x54xHWvJBr7WpbrvxTW5lpONilVNwgLh-->
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Yakissoba</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="cha.jpg" class="d-block w-100" alt="...">
+        <!--https://conteudo.imguol.com.br/c/entretenimento/02/2017/08/03/cha-verde-1501773798026_v2_4x3.jpg-->
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Chá Verde</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="mochi.webp" class="d-block w-100" alt="...">
+        <!--https://cdn.casaeculinaria.com/wp-content/uploads/2024/02/07095037/Mochi.webp-->
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Mochi</h5>
+        </div>
+      </div>
+  
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+   </div>
+
+      <h3 class="h5 mt-3">Avaliações de Clientes</h3>
+      <br>
+      <p>
+          Carla Gabriele ⭐⭐⭐⭐⭐ <br>
+          “Experiência impecável! O Kogane Sushi une tradição japonesa com um ambiente extremamente confortável e elegante. Os pratos são lindos, saborosos e claramente feitos com ingredientes frescos. Atendimento atencioso do começo ao fim. Recomendo muito!” <br>
+          <hr>
+          João Henrique ⭐⭐⭐⭐⭐  <br>
+          “Um dos melhores restaurantes japoneses que já fui. O ambiente é calmo, sofisticado e acolhedor, perfeito tanto para um jantar especial quanto para um momento em família. O sushi é simplesmente maravilhoso, especialmente os combinados da casa.” <br>
+          <hr>
+          Matheus Yamotto ⭐⭐⭐⭐⭐  <br>
+          “Lugar incrível! A apresentação dos pratos é impecável e o sabor supera as expectativas. Dá pra sentir o cuidado em cada detalhe, desde a decoração até o atendimento. O Kogane Sushi virou meu japonês favorito.” <br>
+          <hr>
+          Yasmin Silva ⭐⭐⭐⭐  <br>
+          “Ambiente elegante, música agradável e comida de altíssimo nível. O peixe é extremamente fresco e o arroz no ponto perfeito. Ótima carta de bebidas e as sobremesas deliciosas. Recomendo sem pensar duas vezes.” <br>
+          <hr>
+          Junior Carvalho ⭐⭐⭐⭐⭐  <br>
+          “Perfeito para quem busca uma experiência japonesa autêntica e sofisticada. O Kogane Sushi entrega qualidade, conforto e sabor em um só lugar. Já quero voltar!” <br>
+          <hr>
+      </p>
+  </div>
+ 
+ </section>
+
+
+ <!-- ================== 6. FALE CONOSCO ================== -->
+ <section id="contato" class="py-5">
+   <div class="container">
+     <h2 class="mb-3">Fale Conosco</h2>
+
+
+     <h3 class="h5 mt-3">Informações de Contato</h3>
+     <div class="row">
+          <!-- Informações -->
+          <div class="col-md-6">
+            <p><strong>Endereço:</strong><br>
+            Rua Sakura Dourada, 245 – Centro<br>
+            Maceió – AL</p>
+
+            <p><strong>Telefone / WhatsApp:</strong><br>
+            (82) 4002-8922</p>
+
+            <p><strong>E-mail:</strong><br>
+            koganesushi@hotmail.com</p>
+
+            <p>
+              Faça seu pedido pelo WhatsApp ou venha nos visitar para uma experiência completa
+              da culinária japonesa.
+            </p>
+      </div>
+
+     <!-- TODO: Organizar informações de contato e mapa usando o grid do Bootstrap -->
+
+
+     <h3 class="h5 mt-3">Formulário de Contato</h3>
+    <form class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+      </div>
+    
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label>
+        <input type="email" class="form-control" id="email" placeholder="seuemail@email.com" required>
+      </div>
+    
+      <div class="mb-3">
+        <label for="assunto" class="form-label">Assunto</label>
+        <input type="text" class="form-control" id="assunto" placeholder="Assunto da mensagem" required>
+      </div>
+    
+      <div class="mb-3">
+        <label for="mensagem" class="form-label">Mensagem</label>
+        <textarea class="form-control" id="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+      </div>
+    
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+
+     <!-- TODO: Formulário Bootstrap de contato -->
+   </div>
+ </section>
+
+
+ <!-- ================== 7. PEDIDOS ONLINE / ENTREGA ================== -->
+ <section id="pedidos" class="bg-light py-5">
+   <div class="container">
+     <h2 class="mb-3">Pedidos Online e Entrega</h2>
+     <div class="col-md-6">
+            <p><strong>WhatsApp:</strong><br>
+            envie uma mensagem, escolha os pratos do cardápio e finalize seu pedido com atendimento rápido e personalizado.</p>
+
+            <p><strong>Telefone:</strong><br>
+            ligue diretamente para o restaurante e faça seu pedido com o auxílio da nossa equipe.</p>
+
+            <p><strong>E-mail:</strong><br>
+            Entre em contato conosco pelo email: koganesushi@hotmail.com</p>
+
+            <p>
+              Após a confirmação, você pode optar por retirada no local ou entrega em domicílio, com tempo estimado informado no momento do pedido.
+            </p>
+      </div>
+     <div class="mt-4">
+       <ul class="list-group">
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Centro
+           <span class="badge bg-success">30 – 40 min</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Ponta Verde
+           <span class="badge bg-success">35 – 45 min</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Jatiúca
+           <span class="badge bg-success">40 – 50 min</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Farol
+           <span class="badge bg-warning text-dark">45 – 55 min</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Bairro Sakura 
+           <span class="badge bg-warning text-dark">50 – 60 min</span>
+         </li>
+     
+         <li class="list-group-item d-flex justify-content-between align-items-center">
+           Jardim Oriental 
+           <span class="badge bg-danger">60 – 70 min</span>
+         </li>
+       </ul>
+     </div>
+     
+   </div>
+ </section>
+
+
+ <!-- ================== 9–10. PROMOÇÕES & AVALIAÇÕES ONLINE ================== -->
+ <section id="promocoes" class="py-5">
+   <div class="container">
+     <h2 class="mb-3"><strong>Promoções Especiais</strong></h2>
+      <div class="container my-4">
+  <div class="alert alert-warning text-center" role="alert">
+    🍣 <strong>Promoção da Semana!</strong> Descontos especiais por tempo limitado.
+  </div>
+
+  <div class="row g-4">
+  
+    <div class="col-md-4">
+      <div class="card h-100 border-success">
+        <div class="card-body">
+          <h5 class="card-title">
+            Segunda do Sushi 
+            <span class="badge bg-success">-20%</span>
+          </h5>
+          <p class="card-text">
+            Todas as peças de sushi com <strong>20% de desconto</strong> toda segunda-feira.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          Válido apenas para consumo no local
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="card h-100 border-primary">
+        <div class="card-body">
+          <h5 class="card-title">
+            Combo Kogane
+            <span class="badge bg-primary">Combo</span>
+          </h5>
+          <p class="card-text">
+            Combo especial com <strong>30 peças variadas + 2 temakis</strong> por um preço promocional.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          Ideal para compartilhar
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card h-100 border-danger">
+        <div class="card-body">
+          <h5 class="card-title">
+            Cliente Fidelidade
+            <span class="badge bg-danger">Fidelidade</span>
+          </h5>
+          <p class="card-text">
+            A cada <strong>10 pedidos</strong>, o próximo temaki é por nossa conta.
+          </p>
+        </div>
+        <div class="card-footer text-muted">
+          Válido para pedidos no site e WhatsApp
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<hr id="avalia">
+    <div class="container my-4">
+  <h3 class="mb-4">Avaliações do Kogane Sushi</h3>
+
+  <div class="row g-4">
+
+    <!-- Google -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Google Avaliações</h5>
+          <p class="card-text">
+            ⭐⭐⭐⭐⭐ <br>
+            <strong>4,8 / 5,0</strong>
+          </p>
+          <a href="#" class="btn btn-outline-primary btn-sm">
+            Ver no Google
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- TripAdvisor -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">TripAdvisor</h5>
+          <p class="card-text">
+            ⭐⭐⭐⭐⭐ <br>
+            <strong>4,7 / 5,0</strong>
+          </p>
+          <a href="#" class="btn btn-outline-success btn-sm">
+            Ver no TripAdvisor
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Yelp -->
+    <div class="col-md-4">
+      <div class="card h-100 text-center">
+        <div class="card-body">
+          <h5 class="card-title">Yelp</h5>
+          <p class="card-text">
+            ⭐⭐⭐⭐☆ <br>
+            <strong>4,6 / 5,0</strong>
+          </p>
+          <a href="#" class="btn btn-outline-danger btn-sm">
+            Ver no Yelp
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+ </section>
+
+
+ <!-- ================== FOOTER ================== -->
+ <footer class="bg-dark text-white text-center py-3">
+   <small>© 2025 Kogane Sushi 黄金 - Todos os direitos reservados.</small>
+ </footer>
+
+
+ <!-- BOOTSTRAP JS -->
+ <script
+   src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+ </script>
+</body>
+</html>
