@@ -8,8 +8,8 @@
       box-shadow: 0 2px 4px black;
     }
     .text {
-      top: 20%;
       position: absolute;
+      top: 20%;
       left: clamp(50%, 15vw, 15%);
       transform: translate(-50%, -50%);
       color: oklch(20.8% 0.042 265.755);
@@ -110,6 +110,7 @@
     .col-md-4 {
       margin-bottom: 3rem;
     }
+
 
 
 
